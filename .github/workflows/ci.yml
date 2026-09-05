@@ -42,8 +42,14 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       # This invokes the Raycast CLI.
+      # With CI set, `ray lint` also demands a package-lock.json, because the
+      # Raycast Store pipeline runs on npm. This repo uses pnpm and is not
+      # submitted to the Store, so that one check is switched off. Manifest,
+      # icon, ESLint and Prettier validation all still run.
       - name: Lint
         run: pnpm lint
+        env:
+          CI: "false"
 
   checks:
     name: Typecheck and test
