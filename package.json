@@ -1,0 +1,326 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "raycast-litellm",
+  "version": "0.1.0",
+  "title": "LiteLLM",
+  "description": "Chat and transform text through a LiteLLM proxy",
+  "icon": "icon.png",
+  "author": "kolezka",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "platforms": [
+    "macOS"
+  ],
+  "private": true,
+  "commands": [
+    {
+      "name": "litellm-agent",
+      "title": "Agent",
+      "subtitle": "LiteLLM",
+      "description": "Ask a model to work with tools until the job is done",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-browser-summarize",
+      "title": "Summarize Website",
+      "subtitle": "LiteLLM",
+      "description": "Summarize the frontmost browser tab",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-casual",
+      "title": "Change Tone to Casual",
+      "subtitle": "LiteLLM",
+      "description": "Rewrite the selected text in a casual tone",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-chat",
+      "title": "Chat with LiteLLM",
+      "subtitle": "LiteLLM",
+      "description": "Chat with a model through the LiteLLM proxy",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-code-explain",
+      "title": "Explain Code Step by Step",
+      "subtitle": "LiteLLM",
+      "description": "Explain the selected code step by step",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-confident",
+      "title": "Change Tone to Confident",
+      "subtitle": "LiteLLM",
+      "description": "Rewrite the selected text in a confident tone",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-custom-command",
+      "title": "Custom Command",
+      "subtitle": "LiteLLM",
+      "description": "Run one of your saved prompt commands",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-custom-create",
+      "title": "Create Custom Command",
+      "subtitle": "LiteLLM",
+      "description": "Define a reusable prompt command",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-explain",
+      "title": "Explain This in Simple Terms",
+      "subtitle": "LiteLLM",
+      "description": "Explain the selected text in simple terms",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-fix-spelling-grammar",
+      "title": "Fix Spelling and Grammar",
+      "subtitle": "LiteLLM",
+      "description": "Correct spelling, grammar and punctuation in the selected text",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-friendly",
+      "title": "Change Tone to Friendly",
+      "subtitle": "LiteLLM",
+      "description": "Rewrite the selected text in a friendly tone",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-image-describe",
+      "title": "Describe Content of Image",
+      "subtitle": "LiteLLM",
+      "description": "Describe an image selected in Finder or copied to the clipboard",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-image-to-text",
+      "title": "Get Text from Image",
+      "subtitle": "LiteLLM",
+      "description": "Transcribe the text visible in an image",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-improve-writing",
+      "title": "Improve Writing",
+      "subtitle": "LiteLLM",
+      "description": "Improve the clarity and conciseness of the selected text",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-longer",
+      "title": "Make Longer",
+      "subtitle": "LiteLLM",
+      "description": "Expand the selected text while keeping its tone",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-professional",
+      "title": "Change Tone to Professional",
+      "subtitle": "LiteLLM",
+      "description": "Rewrite the selected text in a professional tone",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-shorter",
+      "title": "Make Shorter",
+      "subtitle": "LiteLLM",
+      "description": "Shorten the selected text while keeping its meaning",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-skill-create",
+      "title": "Create Skill",
+      "subtitle": "LiteLLM",
+      "description": "Define a saved agent procedure with its own tools",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-skill-run",
+      "title": "Run Skill",
+      "subtitle": "LiteLLM",
+      "description": "Run one of your saved agent skills",
+      "mode": "view"
+    },
+    {
+      "name": "litellm-translate",
+      "title": "Translate",
+      "subtitle": "LiteLLM",
+      "description": "Translate the selected text between two languages",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "source",
+          "placeholder": "From language",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "target",
+          "placeholder": "To language",
+          "type": "text",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "litellm-tweet",
+      "title": "Rephrase as Tweet",
+      "subtitle": "LiteLLM",
+      "description": "Rewrite the selected text as a short tweet",
+      "mode": "view"
+    }
+  ],
+  "tools": [
+    {
+      "name": "web-fetch",
+      "title": "Web Fetch",
+      "description": "Fetch the text content of a URL"
+    },
+    {
+      "name": "web-search",
+      "title": "Web Search",
+      "description": "Search the web for a query"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "baseUrl",
+      "title": "LiteLLM Base URL",
+      "description": "Base URL of the LiteLLM proxy, without a trailing slash.",
+      "type": "textfield",
+      "required": true
+    },
+    {
+      "name": "apiKey",
+      "title": "LiteLLM API Key",
+      "description": "Virtual key issued by the LiteLLM proxy. Stored in Raycast's encrypted preference store.",
+      "type": "password",
+      "required": true
+    },
+    {
+      "name": "defaultModel",
+      "title": "Default Model",
+      "description": "Model group used when a command has no override. Leave empty to pick on first run.",
+      "type": "textfield",
+      "required": false,
+      "default": ""
+    },
+    {
+      "name": "requestTimeout",
+      "title": "Request Timeout",
+      "description": "Seconds to wait for the proxy before failing.",
+      "type": "textfield",
+      "required": false,
+      "default": "60"
+    },
+    {
+      "name": "chatHistoryMessages",
+      "title": "Chat Memory Messages",
+      "description": "How many prior messages to send as context in Chat.",
+      "type": "textfield",
+      "required": false,
+      "default": "20"
+    },
+    {
+      "name": "resultViewInput",
+      "title": "Input Source",
+      "description": "Where text-transformation commands read their input from.",
+      "type": "dropdown",
+      "required": false,
+      "default": "selectedText",
+      "data": [
+        {
+          "title": "Selected Text",
+          "value": "selectedText"
+        },
+        {
+          "title": "Clipboard",
+          "value": "clipboard"
+        }
+      ]
+    },
+    {
+      "name": "resultViewInputFallback",
+      "title": "Enable Input Source Fallback",
+      "description": "When the preferred input source is empty, read from the other one instead.",
+      "label": "Fall back to the other source when the preferred one is empty",
+      "type": "checkbox",
+      "required": false,
+      "default": true
+    },
+    {
+      "name": "agentMaxIterations",
+      "title": "Agent Iteration Limit",
+      "description": "How many tool rounds the agent may take before stopping.",
+      "type": "textfield",
+      "required": false,
+      "default": "10"
+    },
+    {
+      "name": "agentWriteTools",
+      "title": "Enable Writing Tools",
+      "description": "Allow the agent to write files, paste text and run shell commands. Reading is unaffected.",
+      "label": "Let the agent change things, not just read them",
+      "type": "checkbox",
+      "required": false,
+      "default": false
+    },
+    {
+      "name": "agentShellAllowlist",
+      "title": "Shell Allowlist",
+      "description": "Comma-separated commands the agent may run, e.g. ls,git,rg. Empty disables the shell entirely.",
+      "type": "textfield",
+      "required": false,
+      "default": ""
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolezka/raycast-litellm.git"
+  },
+  "homepage": "https://github.com/kolezka/raycast-litellm#readme",
+  "bugs": {
+    "url": "https://github.com/kolezka/raycast-litellm/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "raycast",
+    "raycast-extension",
+    "litellm",
+    "llm",
+    "ai",
+    "chat",
+    "proxy"
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.24",
+    "@raycast/utils": "^2.2.7",
+    "openai": "^7.3.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "^22.19.17",
+    "@types/react": "^19.0.10",
+    "eslint": "^10.8.0",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

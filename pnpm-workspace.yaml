@@ -1,0 +1,4 @@
+# esbuild ships a postinstall that fetches its platform binary; vitest needs it.
+# Declared here rather than approved interactively so a fresh clone installs unattended.
+allowBuilds:
+  esbuild: true

@@ -1,0 +1,26 @@
+raycast-litellm
+===============
+
+This extension's user-interface layer and prompt definitions are derived from
+the "Ollama AI" Raycast extension (`raycast-ollama`), used under the MIT
+License.
+
+    Upstream:  https://github.com/raycast/extensions/tree/74199253f634a755c4526bfdc98779d10d7253f9/extensions/raycast-ollama
+    Commit:    74199253f634a755c4526bfdc98779d10d7253f9
+    Author:    Massimiliano Pasquini
+    License:   MIT
+
+Specifically derived from upstream:
+
+  - the answer/chat view structure under `src/lib/ui/`
+  - the prompt wording for the text-transformation commands
+  - the input-acquisition behaviour (selected text with clipboard fallback)
+
+Written independently for this project:
+
+  - the entire LiteLLM API client (`src/lib/litellm/`), which targets an
+    OpenAI-compatible proxy rather than a local Ollama daemon
+  - model discovery, health/error mapping, and reasoning-stream handling
+
+The upstream MIT license text is reproduced in LICENSE, which also covers this
+project's own code.
